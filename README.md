@@ -2,7 +2,11 @@
 
 A one-page clinic website, first built for **Dr. Manisha Ahiwalay, homeopathic physician in Nashik**. Made by [UnBuilt](https://unbuilt.site) as a template we adapt for each clinic.
 
-![Hero](shots/1-hero-desktop.png)
+**Live:** https://advay1608.github.io/unbuilt-clinic-demo/
+
+[![Watch the 1-minute demo](media/demo-poster.jpg)](media/demo.mp4)
+
+▶ [Watch the 1-minute demo video](media/demo.mp4)
 
 ## What's on the page
 

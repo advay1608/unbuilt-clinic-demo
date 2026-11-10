@@ -130,7 +130,7 @@ $('#faq').innerHTML = FAQ.map((f, i) => `<details ${i === 0 ? 'open' : ''}><summ
     if (d.getDay() === 0) return mode() === 'Online video' ? [['Online', ['11:00', '11:30', '12:00', '12:30']]] as const : [];
     return [['Morning', ['10:00', '10:30', '11:00', '11:30', '12:00', '12:30', '1:00']], ['Evening', ['5:30', '6:00', '6:30', '7:00', '7:30', '8:00']]] as const;
   };
-  const fmt = (t: string, g: string) => `${t} ${g === 'Morning' && !t.startsWith('1:') ? 'am' : 'pm'}`;
+  const fmt = (t: string, g: string) => { const h = parseInt(t); return `${t} ${g !== 'Evening' && h >= 9 && h < 12 ? 'am' : 'pm'}`; };
   // Same pseudo-random "booked" slots each time, so the demo looks lived-in.
   const taken = (d: Date, t: string) => ((d.getDate() * 7 + t.length * 13 + parseInt(t)) % 5) === 0;
   const renderDays = () => {
